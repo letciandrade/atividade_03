@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-questao</title>
+</head>
+<body>
+    <!-- 1) Escreva um script que recebe as 3 notas de um aluno por parâmetro
+         e uma letra. Se a letra for A o procedimento calcula a média aritmética
+         das notas do aluno, se for P, a sua média ponderada (pesos: 5, 3 e 2).
+         A média calculada também deve retornar por parâmetro.
+ -->
+
+ <script>
+    
+    let num1,num2, num3, letra, media_a, media_p
+    num1 = parseFloat(prompt("Digite a primeira nota do aluno: "))
+    num2 = parseFloat(prompt("Digite a segunda nota do aluno: "))
+    num3 = parseFloat(prompt("Digite a terceira nota: "))
+    letra = (prompt("Digite 'A' para calcular a média aritmética; \nDigite 'P' para calcular média ponderada."))
+
+    function media(n1,n2,n3,letra,aritmetica,ponderada){
+
+        if(letra == 'A'){
+            aritmetica = (n1+n2+n3)/3
+            console.log(""+aritmetica+"")
+        }
+        else if(letra == 'P'){
+
+            ponderada = ((n1*5) + (n2*3) + (n3*2) )/3
+            console.log(""+ponderada+"")
+        }
+        else{
+
+        }
+
+    }
+    media()
+    
+
+ </script>
+</body>
+</html>
