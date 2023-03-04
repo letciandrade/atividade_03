@@ -15,31 +15,50 @@
 
  <script>
     
-    let num1,num2, num3, letra, media_a, media_p
+   
+    
+
+    function media(num1,num2,num3,letra,aritmetica,ponderada){
+
     num1 = parseFloat(prompt("Digite a primeira nota do aluno: "))
     num2 = parseFloat(prompt("Digite a segunda nota do aluno: "))
     num3 = parseFloat(prompt("Digite a terceira nota: "))
     letra = (prompt("Digite 'A' para calcular a média aritmética; \nDigite 'P' para calcular média ponderada."))
 
-    function media(n1,n2,n3,letra,aritmetica,ponderada){
-
         if(letra == 'A'){
-            aritmetica = (n1+n2+n3)/3
-            console.log(""+aritmetica+"")
+            aritmetica = (num1+num2+num3)/3
+            console.log(`${aritmetica}`)
         }
+        
         else if(letra == 'P'){
 
-            ponderada = ((n1*5) + (n2*3) + (n3*2) )/3
-            console.log(""+ponderada+"")
+            ponderada = ((num1*5) + (num2*3) + (num3*2) )/10
+            console.log(`${ponderada}`)
         }
         else{
-
+           
         }
-
     }
-    media()
+     media()
     
 
- </script>
+//Declarado uma função nomeei ela de "média" 
+//criei parâmetros num1, num2 , num3, letra, aritmetica e ponderada sendo essas duas últimas usadas mais tarde em um if e else.
+//com o parseFloat posso colocar tanto números inteiros, quanto decimais então usei ele por isso.
+//adicionei o prompt pois ele coleta o dado que usuário vai escrever e iria atribuir o valor ao num1, num2 ,num3.
+// if e else serviram para calcular a média que o usuário escolhesse saber, funciona da seguinte forma:
+// se a letra digitada pelo usuário é igual a letra 'A' calcula a média aritmética (letra == 'A') e se isso for falso vai para o próximo bloco
+//se letra digitada pelo usuário é 'P' calcula a média ponderadada (letra == 'P')
+
+// Bem, para calcular média aritmética só precisa você somar todas as notas fornecidas e dividir pela quantidade de notas que também foram fornecidas.
+// já para calcular média ponderada você precisa pegar o peso daquela nota multiplicar por ela e somar pelas outras o resultado você
+// divide pela soma dos pesos das notas.
+// Então acabei atribuindo aos parâmetros aritmetica e ponderada as seguintes fórmulas:
+// num1 + num2 + num3 /3 -- para aritmética.
+// (num1*5 + num2*3 + num3*2)/10 -- para ponderada.
+
+// console.log foi usado para apresentar o resultado no console, esse sinal aqui (`${valor_apresentado}`) é para apresentar o valor afinal o console sem isso nem funciona.
+// por fim, para chamar a função e para ela funcionar coloquei media() no final da chave que fechava a função. 
+</script>
 </body>
 </html>

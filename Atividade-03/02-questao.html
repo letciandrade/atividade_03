@@ -12,6 +12,38 @@
          as variáveis devem ser passadas como parâmetro, não havendo variáveis globais.
  -->
 
+ <script>
+    function horario(segundo,hora,minutos,confirmar){
+      segundo = parseInt(prompt("Digite os segundos que será convertidos em hora e minuto: "))
+      confirmar = (prompt("Confirme essa ação digitando 'Sim' e se deseja cancelar 'Não'"))
+
+      if(confirmar == 'Sim'){
+        hora = Math.round(segundo / 3600)
+        minutos = Math.round(segundo / 60)
+
+        console.log(`Aqui está a conversão do número: \nHoras: ${hora}\nMinutos: ${minutos}\nComo era em segundo: \n${segundo}`)
+      }
+      else if(confirmar == 'Não'){
+        console.log("Você cancelou a ação.")
+      }
+    }
+    horario()
+
+    //Declarei a função e nomeei ela de 'horario' logo após adicionei parâmetros.
+    //parametros esses como: segundo, confirmar, hora e minutos
+    //usei parseInt para indentificar como número inteiro o valor que será recebido e atribuído pelo segundo com o prompt.
+    //e para confirmar a ação que será feita de conversão usei o parâmetro 'confirmar' recebido a resposta também pelo prompt.
+
+    //if e else foram utilizados para a confirmação da ação digitando 'Sim' para realizar a conversão e 'Não' para cancelar,
+    //também foi usado para realizar a conversão da seguinte forma:
+    //Para converter segundo para hora basta fazer segundos dividido por 3600 (segundo / 3600) e de segundo para minutos 
+    //precisa somente fazer segundos dividido por 60 (segundo/60)
+    //para mostrar o resultado, dependendo do que foi escolhido pelo usuário coloquei um console.log, o qual vai fazer aparecer no console.
+    //Depois disso para a função finalmente dar certo precisa chamar ela, no final das chaves da função adicionei o nome que dei a ela
+    //'horario'
+    
+    
+ </script>
  
 </body>
 </html>
